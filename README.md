@@ -1,11 +1,32 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+<p style="text-align:center"><a href="https://laravel.com" target="_blank"><img alt="logoLaravel" src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
-<p align="center">
+<p style="text-align:center">
 <a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
+
+## Yo y easyAR
+
+Hola, mi nombre es Andres más conocido como Andrw soy estudiande del Instituto Profesional Santo Tomas en el cual estoy cursando mi ultimo año y estoy haciendo mi practica profesional con este proyecto.
+
+En este proyecto estare usando:
+- GitKraken (Mantenedor de Versiones y Tablero Canvas)
+- GitHub (Controlador de Versiones)
+- Laragon (Como Todo en uno para subir el servidor)
+- Laravel (Framework)
+- Apache (Servidor)
+- Mysql (Base de datos)
+- PhpMyAdmin (Administrador de base de datos)
+- PhpStorm (IDE)
+
+## Comandos Utiles
+
+**Modo Mantenimiento:**
+- php artisan down --secret="secretPassword"
+- php artisan up
+- 127.0.0.1/secretPassword (Saltar Mantenimiento)
 
 ## About Laravel
 
