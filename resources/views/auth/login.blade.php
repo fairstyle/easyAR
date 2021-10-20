@@ -65,7 +65,7 @@
                                             </button>
                                         </div>
 
-                                        <a href="register.html" class="d-block mt-3 text-muted">No tienes una cuenta? Registrate aquí</a>
+                                        <a href="{{ route('register') }}" class="d-block mt-3 text-muted">No tienes una cuenta? Registrate aquí</a>
                                     </form>
                                 </div>
                             </div>

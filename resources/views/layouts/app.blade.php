@@ -14,7 +14,7 @@
 
         <!-- Scripts -->
         <script src="{{ asset('js/theme.js') }}" defer></script>
-        <script src="{{ asset('js/feather.min.js') }}"></script>
+        <script src="{{ asset('js/feather.min.js') }}" defer></script>
     </head>
 
     <body>

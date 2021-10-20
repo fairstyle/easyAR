@@ -9,6 +9,7 @@
 
         <!-- Styles -->
         <link rel="stylesheet" href="{{ asset('css/theme.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/iconfont.css') }}">
 
         <!-- Scripts -->
         <script src="{{ asset('js/theme.js') }}" defer></script>

@@ -1,5 +1,4 @@
 <x-guest-layout>
-
     <div class="page-wrapper full-page">
         <div class="page-content d-flex align-items-center justify-content-center">
             <div class="row w-100 mx-0 auth-page">
@@ -50,14 +49,17 @@
                                             <input type="password" class="form-control" id="password_confirmation" name="password_confirmation" autocomplete="current-password" required>
                                         </div>
 
-                                        <div class="form-check form-check-flat form-check-primary">
-                                            <label class="form-check-label">
-                                                <input type="checkbox" class="form-check-input" name="terms" id="terms">
-                                                {!! __('Acepto los :terms_of_service y :privacy_policy', [
+                                        <div style="overflow-y: hidden;">
+                                            <div style="float: left;" class="form-check form-check-flat form-check-primary">
+                                                <label class="form-check-label">
+                                                    <input type="checkbox" class="form-check-input" name="terms" id="terms">
+                                                </label>
+                                            </div>
+                                                {!! __('Acepto los :terms_of_service y <br> :privacy_policy', [
                                                         'terms_of_service' => '<a target="_blank" href="'.route('terms.show').'">'.__('Términos de servicio').'</a>',
                                                         'privacy_policy' => '<a target="_blank" href="'.route('policy.show').'">'.__('Política de privacidad').'</a>',
                                                 ]) !!}
-                                            </label>
+
                                         </div>
 
                                         <div class="mt-3">
