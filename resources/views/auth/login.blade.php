@@ -1,48 +1,79 @@
 <x-guest-layout>
-    <x-jet-authentication-card>
-        <x-slot name="logo">
-            <x-jet-authentication-card-logo />
-        </x-slot>
 
-        <x-jet-validation-errors class="mb-4" />
+    <div class="page-wrapper full-page">
+        <div class="page-content d-flex align-items-center justify-content-center">
+            <div class="row w-100 mx-0 auth-page">
+                <div class="col-md-8 col-xl-6 mx-auto">
+                    <div class="card">
+                        <div class="row">
+                            <div class="col-md-4 pr-md-0">
+                                <div class="auth-left-wrapper">
 
-        @if (session('status'))
-            <div class="mb-4 font-medium text-sm text-green-600">
-                {{ session('status') }}
+                                </div>
+                            </div>
+                            <div class="col-md-8 pl-md-0">
+                                <div class="auth-form-wrapper px-4 py-5">
+                                    <a href="#" class="noble-ui-logo d-block mb-2">Easy<span>AR</span></a>
+                                    <h5 class="text-muted font-weight-normal mb-4">Bienvenido! Conectate con tu cuenta.</h5>
+
+                                    @if (session('status'))
+                                        <div class="mb-4 font-medium text-sm text-green-600">
+                                            {{ session('status') }}
+                                        </div>
+                                    @endif
+
+                                    <form class="forms-sample" method="POST" action="{{ route('login') }}">
+                                        @csrf
+
+                                        @if ($errors->any())
+                                            <div>
+                                                <div class="text-danger-muted"> Whoops! Algo salio mal.</div>
+
+                                                <ul class="text-danger-muted">
+                                                    @foreach ($errors->all() as $error)
+                                                        <li>{{ $error }}</li>
+                                                    @endforeach
+                                                </ul>
+                                            </div>
+                                        @endif
+
+                                        <div class="form-group">
+                                            <label for="email">Correo</label>
+                                            <input type="email" class="form-control" id="email" name="email" placeholder="Email" value="{{old('email')}}" required autofocus>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="exampleInputPassword1">Contraseña</label>
+                                            <input type="password" class="form-control" id="password" name="password" placeholder="Contraseña" autocomplete="current-password" required>
+                                        </div>
+
+                                        <div class="form-check form-check-flat form-check-primary">
+                                            <label for="remember_me" class="form-check-label">
+                                                <input type="checkbox" id="remember_me" name="remember" class="form-check-input">
+                                                Recuérdame
+                                            </label>
+                                        </div>
+
+                                        <div class="mt-3">
+                                            <button type="submit" class="btn btn-primary mr-2 mb-2 mb-md-0 text-white">
+                                                Conectar
+                                            </button>
+
+                                            <button type="button" class="btn btn-outline-primary btn-icon-text mb-2 mb-md-0" href="{{ route('password.request') }}">
+                                                <i class="btn-icon-prepend" data-feather="twitter"></i>
+                                                Recuperar contraseña
+                                            </button>
+                                        </div>
+
+                                        <a href="register.html" class="d-block mt-3 text-muted">No tienes una cuenta? Registrate aquí</a>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        @endif
 
-        <form method="POST" action="{{ route('login') }}">
-            @csrf
-
-            <div>
-                <x-jet-label for="email" value="{{ __('Email') }}" />
-                <x-jet-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus />
-            </div>
-
-            <div class="mt-4">
-                <x-jet-label for="password" value="{{ __('Password') }}" />
-                <x-jet-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="current-password" />
-            </div>
-
-            <div class="block mt-4">
-                <label for="remember_me" class="flex items-center">
-                    <x-jet-checkbox id="remember_me" name="remember" />
-                    <span class="ml-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
-                </label>
-            </div>
-
-            <div class="flex items-center justify-end mt-4">
-                @if (Route::has('password.request'))
-                    <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('password.request') }}">
-                        {{ __('Forgot your password?') }}
-                    </a>
-                @endif
-
-                <x-jet-button class="ml-4">
-                    {{ __('Log in') }}
-                </x-jet-button>
-            </div>
-        </form>
-    </x-jet-authentication-card>
+        </div>
+    </div>
 </x-guest-layout>

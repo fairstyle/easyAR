@@ -17,6 +17,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/modelos3d', function () {
+    return view('dashboard');
+})->name('crud.modelos3d');
+
+Route::get('/codigosqr', function () {
+    return view('dashboard');
+})->name('crud.codigosqr');
+
 Route::middleware(['auth:sanctum', 'verified'])->group(function (){
 
     Route::get('/dashboard', function (){
