@@ -5,42 +5,49 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>{{ config('app.name', 'Laravel') }}</title>
-
-        <!-- Fonts -->
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
+        <title>{{ config('app.name', 'EasyAR') }}</title>
 
         <!-- Styles -->
-        <link rel="stylesheet" href="{{ mix('css/app.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/theme.css') }}">
 
         @livewireStyles
 
         <!-- Scripts -->
-        <script src="{{ mix('js/app.js') }}" defer></script>
+        <script src="{{ asset('js/theme.js') }}" defer></script>
+        <script src="{{ asset('js/feather.min.js') }}"></script>
     </head>
-    <body class="font-sans antialiased">
-        <x-jet-banner />
 
-        <div class="min-h-screen bg-gray-100">
-            @livewire('navigation-menu')
+    <body>
+        <div class="main-wrapper">
 
-            <!-- Page Heading -->
-            @if (isset($header))
-                <header class="bg-white shadow">
-                    <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                        {{ $header }}
-                    </div>
-                </header>
-            @endif
+            @livewire('sidebar')
 
-            <!-- Page Content -->
-            <main>
-                {{ $slot }}
-            </main>
+            <!-- Barra Superior -->
+            <div class="page-wrapper">
+
+                @livewire('navbar')
+
+                <!-- Contenido de pagina -->
+                <div class="page-content">
+                    {{ $slot }}
+                </div>
+
+                <!-- Pie de pagina -->
+                <footer class="footer d-flex flex-column flex-md-row align-items-center justify-content-between">
+                    <p class="text-muted text-center text-md-left">Copyright © 2021 <a href="" target="_blank">Andrw</a>. Todos los derechos reservados</p>
+                </footer>
+
+                @stack('modals')
+
+                @livewireScripts
+            </div>
+        <!-- Termino Barra superior -->
         </div>
 
-        @stack('modals')
-
-        @livewireScripts
     </body>
 </html>
+
+
+
+
+

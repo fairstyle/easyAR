@@ -9,9 +9,9 @@
 
 ## Yo y easyAR
 
-Hola, mi nombre es Andres más conocido como Andrw soy estudiande del Instituto Profesional Santo Tomas en el cual estoy cursando mi ultimo año y estoy haciendo mi practica profesional con este proyecto.
+Hola, mi nombre es Andres más conocido como Andrw soy estudiande del Instituto Profesional Santo Tomás en el cual estoy cursando mi último año y estoy haciendo mi práctica profesional con este proyecto.
 
-En este proyecto estare usando:
+En este proyecto estaré usando:
 - GitKraken (Mantenedor de Versiones y Tablero Canvas)
 - GitHub (Controlador de Versiones)
 - Laragon (Como Todo en uno para subir el servidor)
@@ -21,12 +21,15 @@ En este proyecto estare usando:
 - PhpMyAdmin (Administrador de base de datos)
 - PhpStorm (IDE)
 
-## Comandos Utiles
+## Comandos Útiles
 
-**Modo Mantenimiento:**
+**En caso de Activar/Desactivar el modo mantenimiento:**
 - php artisan down --secret="secretPassword"
 - php artisan up
 - 127.0.0.1/secretPassword (Saltar Mantenimiento)
+
+**En caso de que no funcionen las imágenes:**
+- php artisan storage:link
 
 ## About Laravel
 
