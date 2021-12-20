@@ -8,9 +8,9 @@ use Spatie\Permission\Models\Role;
 
 Route::group(['prefix' => 'admin', 'middleware' => ['role:super-admin']], function () {
 
-    Route::get('tema', function () {
-        return view('admin.tema');
-    })->name('admin.tema');
+    Route::get('api', function () {
+        return view('admin.api');
+    })->name('admin.api');
 
     Route::post('crear_token', [ApiController::class, 'crear'])
         ->name('admin.crear_token');

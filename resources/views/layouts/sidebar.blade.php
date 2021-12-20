@@ -65,9 +65,9 @@
 
             @role('super-admin')
             <li class="nav-item">
-                <a href="{{ route('admin.tema') }}" class="nav-link">
+                <a href="{{ route('admin.api') }}" class="nav-link">
                     <i class="link-icon" data-feather="aperture"></i>
-                    <span class="link-title">Tema</span>
+                    <span class="link-title">Api</span>
                 </a>
             </li>
             <li class="nav-item">
