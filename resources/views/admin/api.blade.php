@@ -207,7 +207,7 @@
                     <div class="method-path">
                         <pre class="get"><code class="huge"><span class="http-method">get</span> /qrcode/{qrcode_uuid}</code></pre></div>
                     <div class="method-summary">Retorna un json con los datos del codigo qr (<span class="nickname">qrcodeQrcodeUuidGet</span>)</div>
-                    <div class="method-notes">Retorna un json con la informaci贸n obtenida desde el servidor del codigo qr</div>
+                    <div class="method-notes">Retorna un json con la información obtenida desde el servidor del codigo qr</div>
 
                     <h3 class="field-label">Path parameters</h3>
                     <div class="field-items">
@@ -227,7 +227,7 @@
                     <div class="example-data-content-type">Content-Type: application/json</div>
                     <pre class="example"><code>{
               "name" : "Nombre codigo QR",
-              "desc" : "Descripci贸n codigo QR",
+              "desc" : "Descripción codigo QR",
               "img_path" : "ieGhbbak6sDzWo1BQg7FIVUHEKFWVC4RaflfVWjg.png"
             }</code></pre>
 
