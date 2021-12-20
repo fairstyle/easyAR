@@ -7,8 +7,7 @@
                     <div class="card">
                         <div class="row">
                             <div class="col-md-4 pr-md-0">
-                                <div class="auth-left-wrapper">
-
+                                <div class="auth-left-wrapper" style="background-image:url('https://images.unsplash.com/photo-1610081574260-e61e93e6e1aa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=10') ">
                                 </div>
                             </div>
                             <div class="col-md-8 pl-md-0">
@@ -43,7 +42,7 @@
                                         </div>
 
                                         <div class="form-group">
-                                            <label for="exampleInputPassword1">Contraseña</label>
+                                            <label for="password">Contraseña</label>
                                             <input type="password" class="form-control" id="password" name="password" placeholder="Contraseña" autocomplete="current-password" required>
                                         </div>
 
@@ -59,8 +58,8 @@
                                                 Conectar
                                             </button>
 
-                                            <button type="button" class="btn btn-outline-primary btn-icon-text mb-2 mb-md-0" href="{{ route('password.request') }}">
-                                                <i class="btn-icon-prepend" data-feather="twitter"></i>
+                                            <button type="button" class="btn btn-outline-primary btn-icon-text mb-2 mb-md-0" onclick="location.href='{{ route('password.request') }}'"">
+                                                <i class="btn-icon-prepend" data-feather="refresh-ccw"></i>
                                                 Recuperar contraseña
                                             </button>
                                         </div>

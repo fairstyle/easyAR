@@ -5,27 +5,38 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>{{ config('app.name', 'EasyAR') }}</title>
+        <title>{{ config('app.name', 'Laravel') }}</title>
 
         <!-- Styles -->
-        <link rel="stylesheet" href="{{ asset('css/theme.css') }}">
-
-        @livewireStyles
+        @if (cache()->has('darkTheme'))
+            @if(cache()->get('darkTheme'))
+                <link rel="stylesheet" href="{{ asset('theme/css/appdark.css') }}">
+            @else
+                <link rel="stylesheet" href="{{ asset('theme/css/app.css') }}">
+            @endif
+        @else
+            <link rel="stylesheet" href="{{ asset('theme/css/app.css') }}">
+            @php cache()->set('darkTheme', false); @endphp
+        @endif
+        <link rel="stylesheet" href="{{ asset('theme/css/iconfont.css') }}">
 
         <!-- Scripts -->
-        <script src="{{ asset('js/theme.js') }}" defer></script>
-        <script src="{{ asset('js/feather.min.js') }}" defer></script>
+        <script src="{{ asset('theme/js/app.js') }}" defer></script>
+        <script src="{{ asset('theme/js/feather.min.js') }}" defer></script>
+
+        <!-- Dark Theme -->
+        <script src="{{ asset('theme/js/app/theme.js') }}" ></script>
+
     </head>
 
-    <body>
+    <body class="">
         <div class="main-wrapper">
-
-            @livewire('sidebar')
+            @include('layouts.sidebar')
 
             <!-- Barra Superior -->
             <div class="page-wrapper">
 
-                @livewire('navbar')
+                @include('layouts.navbar')
 
                 <!-- Contenido de pagina -->
                 <div class="page-content">
@@ -37,17 +48,9 @@
                     <p class="text-muted text-center text-md-left">Copyright © 2021 <a href="" target="_blank">Andrw</a>. Todos los derechos reservados</p>
                 </footer>
 
-                @stack('modals')
-
-                @livewireScripts
             </div>
-        <!-- Termino Barra superior -->
+            <!-- Termino Barra superior -->
         </div>
 
     </body>
 </html>
-
-
-
-
-

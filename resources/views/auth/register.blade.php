@@ -6,8 +6,7 @@
                     <div class="card">
                         <div class="row">
                             <div class="col-md-4 pr-md-0">
-                                <div class="auth-left-wrapper">
-
+                                <div class="auth-left-wrapper" style="background-image: url('https://images.unsplash.com/photo-1596265371388-43edbaadab94?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=687&q=10')">
                                 </div>
                             </div>
                             <div class="col-md-8 pl-md-0">
@@ -55,10 +54,10 @@
                                                     <input type="checkbox" class="form-check-input" name="terms" id="terms">
                                                 </label>
                                             </div>
-                                                {!! __('Acepto los :terms_of_service y <br> :privacy_policy', [
-                                                        'terms_of_service' => '<a target="_blank" href="'.route('terms.show').'">'.__('Términos de servicio').'</a>',
-                                                        'privacy_policy' => '<a target="_blank" href="'.route('policy.show').'">'.__('Política de privacidad').'</a>',
-                                                ]) !!}
+                                            {!! __('Acepto los :terms_of_service y <br> :privacy_policy', [
+                                                    'terms_of_service' => '<a target="_blank" href="'.route('login').'">'.__('Términos de servicio').'</a>',
+                                                    'privacy_policy' => '<a target="_blank" href="'.route('login').'">'.__('Política de privacidad').'</a>',
+                                            ]) !!}
 
                                         </div>
 
